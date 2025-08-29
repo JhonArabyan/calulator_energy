@@ -19,7 +19,7 @@
   </header>
   <main>
     {% block content %}
-    <form action="{{ url_for('submit_form') }}" method="post" class="form">
+    <form action="{{ url_for('submit_form') }}" method="post" class="form" enctype="multipart/form-data">
       <div class="user">
         <ul class="user-info">
             <li class="user-info__item">
@@ -45,6 +45,11 @@
                 <label for="date">Укажите дату приезда наших служб</label>
                 <input type="date" name="date" id="date" required>
             </li>
+            <li class="user-info__item">
+                <label for="myfile">Загрузите файл</label>
+                <input type="file" name="myfile">
+            </li>
+            
         </ul>
     </div>
     <button class="button" type="submit">Готово!</button>
